@@ -1,0 +1,146 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Serif';
+  overflow:hidden;
+}
+
+/* pages */
+.page{
+  min-height:100vh;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  opacity:0;
+  transition:0.6s;
+}
+
+.page.active{
+  display:flex;
+  opacity:1;
+}
+
+/* backgrounds */
+.bg1{
+  background:url("https://i.pinimg.com/1200x/2f/3a/3b/2f3a3b1215d7cbdcfce5d6a6aad8c05e.jpg") center/cover no-repeat;
+}
+.bg2{
+  background:url("https://i.pinimg.com/736x/a2/b4/fe/a2b4fe42e21fcf9ef0853be2de891450.jpg") center/cover no-repeat;
+}
+.bg3{
+  background:url("https://i.pinimg.com/736x/0d/e8/08/0de808dfca5f17cb1b2bdee3368c467c.jpg") center/cover no-repeat;
+}
+.bg4{
+  background:url("https://i.pinimg.com/1200x/34/b6/26/34b6268dc8749c8f1ade40374d6aca10.jpg") center/cover no-repeat;
+}
+
+.content{
+  background:rgba(255, 255, 255, 0.232);
+  backdrop-filter:blur(6px);
+  padding:25px;
+  border-radius:22px;
+  max-width:650px;
+}
+
+.text{
+  font-size:22px;
+  line-height:1.6;
+}
+
+button{
+  margin-top:20px;
+  padding:10px 24px;
+  font-size:16px;
+  border:none;
+  border-radius:14px;
+  background:#072255;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button{
+  font-family:'Serif';
+ 
+}
+
+
+button:hover{
+  background:#143d8c;
+  transform: scale(1.8);
+}
+
+/* envelope */
+.envelope{
+  width:300px;
+  height:200px;
+  background:#f7f7f7;
+  border-radius:12px;
+  position:relative;
+  margin:auto;
+}
+
+.heart{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px;
+  cursor:pointer;
+}
+
+.letter{
+  position:absolute;
+  bottom:15%;
+  left:50%;
+  transform:translateX(-50%) translateY(60%);
+  background:rgba(255,255,255,0.5);
+  padding:14px;
+  width:85%;
+  border-radius:14px;
+  font-size:14px;
+  opacity:0;
+  transition:1s;
+}
+
+.envelope.open .letter{
+  transform:translateX(-50%) translateY(0);
+  opacity:1;
+}
+
+/* buttons */
+.btn-row{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+#noBtn{
+  position:relative;
+}
+
+.final-note{
+  font-size:30px;
+  line-height:1.7;
+}
+
+/* floating hearts */
+#hearts span{
+  position:fixed;
+  bottom:-10%;
+  color:rgba(255, 255, 255, 0.414);
+  font-size:30px;
+  animation:float 15s linear infinite;
+}
+
+@keyframes float{
+  to{
+    transform:translateY(-120vh);
+  }
+}
